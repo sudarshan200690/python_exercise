@@ -1,14 +1,10 @@
 def fib(n):
-    if n == 1:
-        print(n)
+    if ( n == 0 ):
+        return 0
+    elif( n == 1):
+        return 1
     else:
-        a = 0
-        b = 1
-        print(a)
-        print(b)
-        for i in range(2,n):
-            c = a + b
-            a = b
-            b = c
-            print(c)
-fib(10)
+        return (fib(n-1) + fib(n-2))
+num = int(input("Enter your no to how much series you want:"))
+for i in range(num):
+    print(fib(i))

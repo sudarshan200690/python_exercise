@@ -1,20 +1,7 @@
-import sys
-
-def fact(n):
-    f = 1
-    for i in range(1, n+1):
-        f = f * i
-    return f
-result = fact(5)
-print(result)
-
-# Factorial via recursion:
-sys.getrecursionlimit()
-sys.setrecursionlimit(1500)
-def factorial(p):
-    if (p == 0):
+def factorial(n):
+    if ( n == 0 or n == 1):
         return 1
-    fact = p * factorial(p-1)
-    return fact
-res = factorial(2)
-print(res)
+    else:
+        return n * factorial(n-1)
+num = int(input("Enter the no: "))
+print(factorial(num))
